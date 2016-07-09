@@ -1,8 +1,8 @@
 var cards=['queen','queen','king','king'];
-var cardsInPlay=[]; 
+var cardsInPlay=[];
 var creatBoard=function(){
 	for(var i=0;i<cards.length;i++){
-		document.getElementsByClassName('card')[i].setAttribute('data-card',cards[i]);	   
+		document.getElementsByClassName('card')[i].setAttribute('data-card',cards[i]);
 	    document.getElementsByClassName('card')[i].addEventListener('click',isTwoCards);
 	}
 };
@@ -14,7 +14,7 @@ var isTwoCards=function(){
 	else{
 		this.innerHTML="<img src='http://i.imgur.com/XQfOj31.png' alt='Heart of King'>";
 	}
-	
+
 	if(cardsInPlay.length==2){
 		isMatch();
 		cardsInPlay=[];
